@@ -2,7 +2,7 @@ import { Navbar, TagSidebar } from '../components';
 
 export const AllNotesPage = () => {
   return (
-    <div className="flex">
+    <div className="w-full flex">
       <TagSidebar />
       <div>
         <Navbar />
