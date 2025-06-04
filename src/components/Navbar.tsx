@@ -1,12 +1,18 @@
-import settingsIcon from '../assets/gear-solid.svg';
+import { FaGear } from 'react-icons/fa6';
 import search from '../assets/magnifying-glass-solid.svg';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
-export const Navbar = () => {
+interface NavbarProps {
+  title: string;
+}
+
+export const Navbar = ({ title }: NavbarProps) => {
   const navigation = useNavigate();
+  const location = useLocation();
+  const isActive = location.pathname === '/settings';
   return (
-    <div className="w-full max-w-full mx-auto flex justify-between items-center px-4 py-6">
-      <h1 className="text-4xl font-extrabold">All Notes</h1>
+    <div className="w-full max-w-full mx-auto flex justify-between items-center px-4 py-6 border-b border-b-neutral-200">
+      <h1 className="text-4xl font-extrabold">{title}</h1>
 
       <div className="flex items-center gap-x-4 ml-[1000px]">
         <div className="flex items-center border border-neutral-200 hover:border-blue-500 rounded w-auto min-w-96 px-5 py-2">
@@ -17,14 +23,17 @@ export const Navbar = () => {
             placeholder="Search by title, content or tags..."
           />
         </div>
-        <img
-          src={settingsIcon}
-          alt="settings"
-          width={25}
-          height={25}
-          className="ml-2"
-          onClick={() => navigation('/settings')}
-        />
+        <div className={`px-3 py-3 ${isActive ? 'bg-neutral-100' : 'bg-white'}`}>
+          <FaGear
+            size={25}
+            onClick={() => {
+              navigation('/settings');
+            }}
+            className={`cursor-pointer ml-2 transition-colors duration-300 ${
+              isActive ? 'text-blue-600' : 'text-black'
+            }`}
+          />
+        </div>
       </div>
     </div>
   );

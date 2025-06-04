@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
-root {
-  -neutral-950: #0e121b;
+:root {
+  --neutral-950: #0e121b;
   --neutral-900: #191b25;
   --neutral-800: #232530;
   --neutral-700: #2b3039;

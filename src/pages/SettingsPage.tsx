@@ -1,7 +1,12 @@
+import { Navbar, TagSidebar } from '../components';
+
 export const SettingsPage = () => {
   return (
-    <div className="bg-pink-500">
-      <p>Settings</p>
+    <div className="flex">
+      <TagSidebar />
+      <div>
+        <Navbar title="Settings" />
+      </div>
     </div>
   );
 };
