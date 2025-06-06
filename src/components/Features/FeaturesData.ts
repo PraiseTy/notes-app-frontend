@@ -1,4 +1,5 @@
 import { MdLightMode, MdDarkMode } from 'react-icons/md';
+import type { FontStyle } from '../../styles';
 
 export const ColorThemeData = [
   {
@@ -13,7 +14,7 @@ export const ColorThemeData = [
   }
 ];
 
-export const FontThemeData = [
+export const FontThemeData: { style: FontStyle; mode: string; text: string }[] = [
   {
     style: 'font-sans',
     mode: 'Sans-serif',

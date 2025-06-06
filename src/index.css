@@ -20,10 +20,24 @@
   --green-100: #d1f8e9;
   --red-500: #fb3746;
   --red-100: #ffd5d8;
+  --text-100: #000000;
 }
 
-html,
+.dark {
+  --neutral-0: #0e121b;
+  --text-100: #e0e4ea;
+  --neutral-200: #232530;
+  --neutral-100: #2b3039;
+}
 body,
 #root {
   height: 100%;
+}
+
+body {
+  background-color: var(--neutral-0);
+  color: var(--text-100);
+  --color-neutral-200: var(--neutral-200);
+  --color-neutral-100: var(--neutral-100);
+  --color-text-black: var(--neutral-0);
 }
