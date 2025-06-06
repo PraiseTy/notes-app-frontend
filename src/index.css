@@ -41,3 +41,9 @@ body {
   --color-neutral-100: var(--neutral-100);
   --color-text-black: var(--neutral-0);
 }
+
+html,
+body,
+#root {
+  height: 100%;
+}

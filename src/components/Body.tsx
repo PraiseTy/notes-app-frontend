@@ -13,6 +13,7 @@ export const Body = () => {
 
   useTheme({ mode });
 
+
   return (
     <div className="flex flex-row h-full ">
       <div className="flex flex-col mx-2 border-r border-r-neutral-200 h-full max-w-[258px] w-1/2  py-8">
