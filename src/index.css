@@ -21,3 +21,9 @@
   --red-500: #fb3746;
   --red-100: #ffd5d8;
 }
+
+html,
+body,
+#root {
+  height: 100%;
+}
