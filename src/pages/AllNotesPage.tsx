@@ -4,7 +4,7 @@ export const AllNotesPage = () => {
   return (
     <div className="w-full flex">
       <TagSidebar />
-      <div>
+      <div className="flex-1">
         <Navbar title="All Notes" />
       </div>
     </div>

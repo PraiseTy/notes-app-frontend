@@ -4,15 +4,20 @@ import type { IconType } from 'react-icons';
 interface TabsProps {
   svg: IconType;
   title: string;
+  isActive: boolean;
+  onClick: () => void;
 }
-export const TabSection = ({ svg: Icon, title }: TabsProps) => {
+export const TabSection = ({ svg: Icon, title, isActive, onClick }: TabsProps) => {
   return (
-    <div className="flex items-center mx-auto text-sm cursor-pointer  gap-x-16">
-      <div className="flex flex-row items-center  space-x-1">
-        <Icon size={24} />
+    <div
+      className={`flex items-center mx-auto text-sm cursor-pointer gap-x-16 ${isActive ? 'bg-neutral-100' : 'bg-white'} px-3 py-2 rounded-lg`}
+      onClick={onClick}
+    >
+      <div className="flex flex-row items-center  space-x-2">
+        <Icon size={24} className={`${isActive ? 'text-blue-500' : 'text-black'}`} />
         <p>{title}</p>
       </div>
-      <MdArrowForwardIos size={15} />
+      <MdArrowForwardIos size={15} className={`${isActive ? 'visible' : 'invisible'}`} />
     </div>
   );
 };

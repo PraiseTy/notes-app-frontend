@@ -11,28 +11,30 @@ export const Navbar = ({ title }: NavbarProps) => {
   const location = useLocation();
   const isActive = location.pathname === '/settings';
   return (
-    <div className="w-full max-w-full mx-auto flex justify-between items-center px-4 py-6 border-b border-b-neutral-200">
-      <h1 className="text-4xl font-extrabold">{title}</h1>
+    <div className="px-4 py-6 border-b border-b-neutral-200">
+      <div className="flex items-center justify-between">
+        <h1 className="text-2xl font-extrabold">{title}</h1>
 
-      <div className="flex items-center gap-x-4 ml-[1000px]">
-        <div className="flex items-center border border-neutral-200 hover:border-blue-500 rounded w-auto min-w-96 px-5 py-2">
-          <img src={search} alt="search" width={20} height={20} />
-          <input
-            type="text"
-            className="outline-none px-2 py-1 w-full"
-            placeholder="Search by title, content or tags..."
-          />
-        </div>
-        <div className={`px-3 py-3 ${isActive ? 'bg-neutral-100' : 'bg-white'}`}>
-          <FaGear
-            size={25}
-            onClick={() => {
-              navigation('/settings');
-            }}
-            className={`cursor-pointer ml-2 transition-colors duration-300 ${
-              isActive ? 'text-blue-600' : 'text-black'
-            }`}
-          />
+        <div className="flex items-center gap-x-4">
+          <div className="flex items-center border border-neutral-200 hover:border-blue-500 rounded w-auto min-w-96 px-5 py-2">
+            <img src={search} alt="search" width={20} height={20} />
+            <input
+              type="text"
+              className="outline-none px-2 py-1 w-full"
+              placeholder="Search by title, content or tags..."
+            />
+          </div>
+          <div className={`px-3 py-3 ${isActive ? 'bg-neutral-100' : 'bg-white'}`}>
+            <FaGear
+              size={25}
+              onClick={() => {
+                navigation('/settings');
+              }}
+              className={`cursor-pointer ml-2 transition-colors duration-300 ${
+                isActive ? 'text-blue-600' : 'text-black'
+              }`}
+            />
+          </div>
         </div>
       </div>
     </div>

@@ -1,12 +1,23 @@
 import { MdLightMode, MdOutlineTextFields } from 'react-icons/md';
+import type { IconType } from 'react-icons';
 
-export const TabsData = [
+type TabKey = 'color' | 'font';
+
+interface TabItem {
+  svg: IconType;
+  title: string;
+  key: TabKey;
+}
+
+export const TabsData: TabItem[] = [
   {
     svg: MdLightMode,
-    title: 'Color Theme'
+    title: 'Color Theme',
+    key: 'color'
   },
   {
     svg: MdOutlineTextFields,
-    title: 'Font Theme'
+    title: 'Font Theme',
+    key: 'font'
   }
 ];
