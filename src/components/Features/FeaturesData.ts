@@ -15,7 +15,6 @@ export const ColorThemeData = [
 ];
 
 export const FontThemeData: { style: FontStyle; mode: string; text: string }[] = [
-
   {
     style: 'font-sans',
     mode: 'Sans-serif',
