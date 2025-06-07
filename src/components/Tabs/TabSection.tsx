@@ -10,7 +10,7 @@ interface TabsProps {
 export const TabSection = ({ svg: Icon, title, isActive, onClick }: TabsProps) => {
   return (
     <div
-      className={`flex items-center mx-auto text-sm cursor-pointer gap-x-16 ${isActive ? 'bg-neutral-200' : 'bg-neutral-0'} px-3 py-2 rounded-lg`}
+      className={`flex justify-between items-center mx-auto text-sm cursor-pointer gap-x-16 ${isActive ? 'bg-neutral-200' : 'bg-neutral-0'} px-3 py-2 rounded-lg`}
       onClick={onClick}
     >
       <div className="flex flex-row items-center  space-x-2">

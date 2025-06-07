@@ -2,12 +2,14 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App.tsx';
-import { FontProvider } from './styles';
+import { FontProvider, ThemeProvider } from './styles';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <FontProvider>
-      <App />
-    </FontProvider>
+    <ThemeProvider>
+      <FontProvider>
+        <App />
+      </FontProvider>
+    </ThemeProvider>
   </StrictMode>
 );

@@ -1,18 +1,14 @@
 import { TabsData, TabSection } from './Tabs';
 import { ColorThemeData, FeaturesSection, FontThemeData } from './Features';
 import { useContext, useState } from 'react';
-import { FontContext, useTheme } from '../styles';
+import { FontContext, useTheme, useThemeContext } from '../styles';
 
 export const Body = () => {
   const [activeTab, setActiveTab] = useState<'color' | 'font'>('color');
-  const [mode, setMode] = useState<'Light Mode' | 'Dark Mode'>(() => {
-    const stored = localStorage.getItem('theme');
-    return stored === 'Dark Mode' ? 'Dark Mode' : 'Light Mode';
-  });
   const { font, setFont } = useContext(FontContext);
+  const { mode, setMode } = useThemeContext();
 
   useTheme({ mode });
-
 
   return (
     <div className="flex flex-row h-full ">

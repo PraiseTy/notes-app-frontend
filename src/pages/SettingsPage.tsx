@@ -2,7 +2,7 @@ import { Body, Navbar, TagSidebar } from '../components';
 
 export const SettingsPage = () => {
   return (
-    <div className="flex h-screen">
+    <div className="flex h-full">
       <TagSidebar />
       <div className="flex flex-col flex-grow">
         <Navbar title="Settings" />

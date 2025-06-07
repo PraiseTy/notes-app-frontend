@@ -28,6 +28,7 @@
   --text-100: #e0e4ea;
   --neutral-200: #232530;
   --neutral-100: #2b3039;
+  --neutral-500: #717784;
 }
 body,
 #root {
@@ -40,6 +41,7 @@ body {
   --color-neutral-200: var(--neutral-200);
   --color-neutral-100: var(--neutral-100);
   --color-text-black: var(--neutral-0);
+  --color-neutral-500: var(--neutral-500);
 }
 
 html,

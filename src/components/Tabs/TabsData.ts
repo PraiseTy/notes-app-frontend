@@ -1,15 +1,24 @@
-import { MdLightMode, MdOutlineTextFields } from 'react-icons/md';
+import { MdLightMode, MdOutlineTextFields, MdOutlineHome } from 'react-icons/md';
 import type { IconType } from 'react-icons';
+import { RiInboxArchiveLine } from 'react-icons/ri';
 
 type TabKey = 'color' | 'font';
 
-interface TabItem {
+type HomeTabKey = 'home' | 'archive';
+
+interface SettingTabItem {
   svg: IconType;
   title: string;
   key: TabKey;
 }
 
-export const TabsData: TabItem[] = [
+interface HomeTabItem {
+  svg: IconType;
+  title: string;
+  key: HomeTabKey;
+}
+
+export const TabsData: SettingTabItem[] = [
   {
     svg: MdLightMode,
     title: 'Color Theme',
@@ -20,4 +29,30 @@ export const TabsData: TabItem[] = [
     title: 'Font Theme',
     key: 'font'
   }
+];
+
+export const HomeTabsData: HomeTabItem[] = [
+  {
+    svg: MdOutlineHome,
+    title: 'All Notes',
+    key: 'home'
+  },
+  {
+    svg: RiInboxArchiveLine,
+    title: 'Archived Notes',
+    key: 'archive'
+  }
+];
+
+export const TagData = [
+  'Dev',
+  'React',
+  'Travel',
+  'Personal',
+  'Cooking',
+  'Recipes',
+  'Typescript',
+  'Fitness',
+  'Health',
+  'Shopping'
 ];
