@@ -31,6 +31,7 @@
   --neutral-500: #717784;
 }
 body,
+html,
 #root {
   height: 100%;
 }
