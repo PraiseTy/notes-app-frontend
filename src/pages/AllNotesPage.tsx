@@ -1,6 +1,8 @@
 import { RiInboxArchiveLine } from 'react-icons/ri';
 import { MdDeleteOutline } from 'react-icons/md';
 import { FaPlus } from 'react-icons/fa';
+import { GoClockFill } from 'react-icons/go';
+import { FiTag } from 'react-icons/fi';
 
 export const AllNotesPage = () => {
   return (
@@ -31,7 +33,18 @@ export const AllNotesPage = () => {
         </div>
       </div>
       <div className="w-[457px] border-r border-r-neutral-200">
-        <div></div>
+        <div className="border-b border-b-neutral-200 mx-8">
+          <h1>Test</h1>
+          <div className="flex items-center">
+            <FiTag />
+            <p>Tags</p>
+            <p>Praise</p>
+          </div>
+          <div className="flex items-center">
+            <GoClockFill /> <p>Last Edited</p>
+            <p>08 June 2025 </p>
+          </div>
+        </div>
       </div>
       <div className="flex-1 border-r border-r-neutral-200">
         <div className="flex flex-col items-start pt-5 space-y-3 w-full px-5">
