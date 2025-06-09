@@ -17,33 +17,43 @@ export const AllNotesPage = () => {
           <div className="border-b border-b-neutral-200 cursor-pointer hover:bg-neutral-200 rounded-md space-y-2.5 px-2 pt-1.5">
             <h2 className="font-semibold tracking-wide text-lg leading-tight ">React Performance Optimization</h2>
             <div className="flex flex-wrap gap-2">
-              <p className="bg-neutral-200 rounded-md inline-flex px-2 py-0.5 text-sm">Praise</p>
-              <p className="bg-neutral-200 rounded-md inline-flex px-2 py-0.5 text-sm">wubalubabadub</p>
-              <p className="bg-neutral-200 rounded-md inline-flex px-2 py-0.5 text-sm">Hope</p>
+              <p className="bg-neutral-600 rounded-md inline-flex px-2 py-0.5 text-sm">Praise</p>
+              <p className="bg-neutral-600 rounded-md inline-flex px-2 py-0.5 text-sm">wubalubabadub</p>
+              <p className="bg-neutral-600 rounded-md inline-flex px-2 py-0.5 text-sm">Hope</p>
             </div>
             <p className="text-neutral-950 font-thin text-sm tracking-wide mb-2">08 June 2025</p>
           </div>
           <div className="border-b border-b-neutral-200 cursor-pointer hover:bg-neutral-200 rounded-md space-y-2.5 px-2 pt-1.5">
             <h2 className="font-semibold tracking-wide text-lg leading-tight">React Performance Optimization</h2>
             <div>
-              <p className="bg-neutral-200 rounded-md inline-flex px-2 py-0.5 text-sm">Hope</p>
+              <p className="bg-neutral-600 rounded-md inline-flex px-2 py-0.5 text-sm">Hope</p>
             </div>
             <p className="text-neutral-950 font-thin text-sm tracking-wide mb-2">08 June 2025</p>
           </div>
         </div>
       </div>
       <div className="w-[457px] border-r border-r-neutral-200">
-        <div className="border-b border-b-neutral-200 mx-8">
-          <h1>Test</h1>
-          <div className="flex items-center">
-            <FiTag />
-            <p>Tags</p>
-            <p>Praise</p>
+        <div className="border-b border-b-neutral-200 mx-8 space-y-2 pb-4">
+          <h1 className="font-bold text-2xl tracking-wider py-3">Test</h1>
+          <div className="flex items-center space-x-16">
+            <div className="flex items-center gap-2">
+              <FiTag size={22} />
+              <p className="font-light">Tags</p>
+            </div>
+            <p className="tracking-wider">Praise</p>
           </div>
-          <div className="flex items-center">
-            <GoClockFill /> <p>Last Edited</p>
-            <p>08 June 2025 </p>
+          <div className="flex items-center space-x-5">
+            <div className="flex items-center gap-2">
+              <GoClockFill size={22} /> <p className="font-light">Last Edited</p>
+            </div>
+            <p className="tracking-wider">08 June 2025 </p>
           </div>
+        </div>
+        <div className="mx-auto p-2  flex justify-center">
+          <textarea
+            className="w-[90%] h-[500px] p-4 mt-3 border border-neutral-200 rounded-lg resize-none focus:outline-none focus:border-neutral-200 placeholder:text-sm"
+            placeholder="Start typing your note here..."
+          ></textarea>
         </div>
       </div>
       <div className="flex-1 border-r border-r-neutral-200">
