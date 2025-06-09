@@ -5,7 +5,7 @@ import { FiTag } from 'react-icons/fi';
 export const AllNotesPage = () => {
   return (
     <div className="flex h-full">
-      <div className="w-[290px] border-r border-r-neutral-200">
+      <div className="w-[290px] border-r border-r-neutral-200 h-full">
         <div className="pt-5 flex justify-center mb-8">
           <button className="flex items-center text-white bg-blue-700 hover:bg-blue-700/80 cursor-pointer px-14 gap-2 py-3 rounded-lg">
             <FaPlus /> <span className="text-sm pl-2">Create New Note</span>
@@ -30,7 +30,7 @@ export const AllNotesPage = () => {
           </div>
         </div>
       </div>
-      <div className="w-[587px] h-screen">
+      <div className="w-[587px] flex flex-col h-full ">
         <div className="border-b border-b-neutral-200 mx-5 space-y-2 pb-4">
           <input
             type="text"
@@ -55,18 +55,18 @@ export const AllNotesPage = () => {
             <p className="tracking-wider text-neutral-500 text-sm">Not yet saved</p>
           </div>
         </div>
-        <div className="flex flex-col h-full justify-center items-center mx-auto p-2 max-w-4xl w-full">
-          <div className="flex justify-center w-[95%] h-[90%] border-b border-b-neutral-200">
+        <div className="flex flex-col h-full max-w-4xl w-full mx-auto p-2 ">
+          <div className="flex-grow w-[95%] h-[90%] border-b border-b-neutral-200 mx-auto">
             <textarea
-              className="w-full h-[90%] p-4 mb-4 mt-3 rounded-lg resize-none focus:outline-none focus:border focus:border-neutral-200 placeholder:text-sm"
+              className="w-full h-[90%] p-4 mt-3 resize-none rounded-lg focus:outline-none focus:border focus:border-neutral-200 placeholder:text-sm"
               placeholder="Start typing your note here..."
             ></textarea>
           </div>
-          <div className="w-[95%] flex justify-start gap-2 mt-7">
+          <div className="w-[95%] flex  gap-2 mt-6 mb-4 mx-auto">
             <button className="px-4 py-2 bg-blue-700 text-white rounded-lg cursor-pointer hover:bg-blue-700/80">
               Save Note
             </button>
-            <button className="px-4 py-2 bg-gray-100 text-black rounded-lg cursor-pointer  hover:bg-gray-200">
+            <button className="px-4 py-2 bg-gray-100 text-black rounded-lg cursor-pointer hover:bg-gray-200">
               Cancel
             </button>
           </div>

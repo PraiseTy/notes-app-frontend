@@ -9,9 +9,9 @@ export const HomePage = () => {
   const activeTab = location.pathname;
 
   return (
-    <div className="w-full flex h-full">
+    <div className="w-full flex ">
       <TagSidebar />
-      <div className="flex-1">
+      <div className="flex-1 flex flex-col">
         <Navbar title={activeTab === '/' ? 'All Notes' : 'Archived Notes'} />
         {activeTab === '/' && <AllNotesPage />}
         {activeTab === '/archivedNotes' && <ArchivedNotesPage />}
