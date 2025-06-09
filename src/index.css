@@ -5,7 +5,7 @@
   --neutral-900: #191b25;
   --neutral-800: #232530;
   --neutral-700: #2b3039;
-  --neutral-600: #525b68;
+  --neutral-600: #e0e4ea;
   --neutral-500: #717784;
   --neutral-400: #9a9aae;
   --neutral-300: #cadfde;
@@ -29,8 +29,11 @@
   --neutral-200: #232530;
   --neutral-100: #2b3039;
   --neutral-500: #717784;
+  --neutral-950: #ffffff;
+  --neutral-600: #525b68;
 }
 body,
+html,
 #root {
   height: 100%;
 }
@@ -42,6 +45,8 @@ body {
   --color-neutral-100: var(--neutral-100);
   --color-text-black: var(--neutral-0);
   --color-neutral-500: var(--neutral-500);
+  --color-neutral-950: var(--neutral-950);
+  --color-neutral-600: var(--neutral-600);
 }
 
 html,
