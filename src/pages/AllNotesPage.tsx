@@ -1,5 +1,3 @@
-import { RiInboxArchiveLine } from 'react-icons/ri';
-import { MdDeleteOutline } from 'react-icons/md';
 import { FaPlus } from 'react-icons/fa';
 import { GoClockFill } from 'react-icons/go';
 import { FiTag } from 'react-icons/fi';
@@ -7,7 +5,7 @@ import { FiTag } from 'react-icons/fi';
 export const AllNotesPage = () => {
   return (
     <div className="flex h-full">
-      <div className="w-[290px] border-r border-r-neutral-200">
+      <div className="w-[290px] border-r border-r-neutral-200 h-full">
         <div className="pt-5 flex justify-center mb-8">
           <button className="flex items-center text-white bg-blue-700 hover:bg-blue-700/80 cursor-pointer px-14 gap-2 py-3 rounded-lg">
             <FaPlus /> <span className="text-sm pl-2">Create New Note</span>
@@ -32,42 +30,49 @@ export const AllNotesPage = () => {
           </div>
         </div>
       </div>
-      <div className="w-[457px] border-r border-r-neutral-200">
-        <div className="border-b border-b-neutral-200 mx-8 space-y-2 pb-4">
-          <h1 className="font-bold text-2xl tracking-wider py-3">Test</h1>
-          <div className="flex items-center space-x-16">
+      <div className="w-[587px] flex flex-col h-full ">
+        <div className="border-b border-b-neutral-200 mx-5 space-y-2 pb-4">
+          <input
+            type="text"
+            placeholder="Enter a title..."
+            className=" text-2xl font-semibold pt-3.5 mb-3 focus:outline-none focus:border-b focus:border-b-neutral-200 w-full"
+          />
+          <div className="flex items-center space-x-4">
             <div className="flex items-center gap-2">
               <FiTag size={22} />
               <p className="font-light">Tags</p>
             </div>
-            <p className="tracking-wider">Praise</p>
+            <input
+              type="text"
+              placeholder="Add tags separated by commas (e.g. Work, Travel)"
+              className="text-sm pt-3.5 mb-3 focus:outline-none focus:border-b focus:border-b-neutral-200 w-full"
+            />
           </div>
           <div className="flex items-center space-x-5">
             <div className="flex items-center gap-2">
               <GoClockFill size={22} /> <p className="font-light">Last Edited</p>
             </div>
-            <p className="tracking-wider">08 June 2025 </p>
+            <p className="tracking-wider text-neutral-500 text-sm">Not yet saved</p>
           </div>
         </div>
-        <div className="mx-auto p-2  flex justify-center">
-          <textarea
-            className="w-[90%] h-[500px] p-4 mt-3 border border-neutral-200 rounded-lg resize-none focus:outline-none focus:border-neutral-200 placeholder:text-sm"
-            placeholder="Start typing your note here..."
-          ></textarea>
+        <div className="flex flex-col h-full max-w-4xl w-full mx-auto p-2 ">
+          <div className="flex-grow w-[95%] h-[90%] border-b border-b-neutral-200 mx-auto">
+            <textarea
+              className="w-full h-[90%] p-4 mt-3 resize-none rounded-lg focus:outline-none focus:border focus:border-neutral-200 placeholder:text-sm"
+              placeholder="Start typing your note here..."
+            ></textarea>
+          </div>
+          <div className="w-[95%] flex  gap-2 mt-6 mb-4 mx-auto">
+            <button className="px-4 py-2 bg-blue-700 text-white rounded-lg cursor-pointer hover:bg-blue-700/80">
+              Save Note
+            </button>
+            <button className="px-4 py-2 bg-gray-100 text-black rounded-lg cursor-pointer hover:bg-gray-200">
+              Cancel
+            </button>
+          </div>
         </div>
       </div>
-      <div className="flex-1 border-r border-r-neutral-200">
-        <div className="flex flex-col items-start pt-5 space-y-3 w-full px-5">
-          <button className="w-full text-sm cursor-pointer gap-2 flex items-center px-4 py-2 border border-neutral-200 rounded-md">
-            <RiInboxArchiveLine size={20} />
-            <span>Archive Note</span>
-          </button>
-          <button className="w-full text-sm cursor-pointer gap-2 flex items-center px-4 py-2 border border-neutral-200 rounded-md">
-            <MdDeleteOutline size={20} />
-            <span>Delete Note</span>
-          </button>
-        </div>
-      </div>
+      <div className="flex-1 border-l border-l-neutral-200"></div>
     </div>
   );
 };

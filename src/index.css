@@ -10,6 +10,7 @@
   --neutral-400: #9a9aae;
   --neutral-300: #cadfde;
   --neutral-200: #e0e4ea;
+  --gray-100: #f3f5f8;
   --neutral-100: #f3f5f8;
   --neutral-50: #f5f7fa;
   --neutral-0: #ffffff;
@@ -31,6 +32,7 @@
   --neutral-500: #717784;
   --neutral-950: #ffffff;
   --neutral-600: #525b68;
+  --gray-150: #f3f5f8;
 }
 body,
 html,
@@ -46,6 +48,7 @@ body {
   --color-text-black: var(--neutral-0);
   --color-neutral-500: var(--neutral-500);
   --color-neutral-950: var(--neutral-950);
+  --color-gray-100: var(--gray-100);
   --color-neutral-600: var(--neutral-600);
 }
 
